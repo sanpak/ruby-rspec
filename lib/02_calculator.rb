@@ -11,4 +11,15 @@ def sum(array)
   array.reduce(:+)
 end
 
-def 
+def multiply(num1,num2)
+  num1 * num2
+end
+
+def power(num1,num2)
+  num1 ** num2
+end
+
+def factorial(num)
+  return 1 if num == 0
+  (1..num).reduce(:*)
+end
