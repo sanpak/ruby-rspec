@@ -28,12 +28,16 @@ end
 
 def titleize(sentence)
   #debugger
-  array = []
-  array = sentence.split.map do |word|
-    unless word == "and"
-      "#{word[0].upcase}#{word[1..-1].downcase}"
+  result = []
+  little_word = ["the","over","and"]
+  array = sentence.split(" ")
+
+  array.each_with_index do |word,idx|
+    if little_word.include?(word) && idx > 0
+      result << "#{word}"
     else
-      "#{word}"
+      result << "#{word[0].upcase}#{word[1..-1].downcase}"
     end
-  end.join(" ")
+  end
+  result.join(" ")
 end
