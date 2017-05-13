@@ -13,3 +13,13 @@ def repeat(greeting,time=2)
   end
   array.join(" ")
 end
+
+def start_of_word(word,idx)
+  word[0..idx - 1]
+end
+
+def first_word(sentence)
+  array = []
+  array = sentence.split
+  array[0]
+end
